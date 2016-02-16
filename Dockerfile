@@ -23,10 +23,10 @@ RUN yum install -y java-1.8.0-openjdk-headless unzip \
 
 
 
-ENV FITNESSE_RELEASE 20151230
+ENV FITNESSE_RELEASE 20110104
 
 RUN mkdir -p /opt/fitnesse/FitNesseRoot \
-  && curl -fsSL -o /opt/fitnesse/fitnesse-standalone.jar "http://www.fitnesse.org/fitnesse-standalone.jar?responder=releaseDownload&release=$FITNESSE_RELEASE" \
+  && curl -fsSL -o /opt/fitnesse/fitnesse-standalone.jar "http://www.fitnesse.org/fitnesse.jar?responder=releaseDownload&release=$FITNESSE_RELEASE" \
   && chown -R fitnesse.fitnesse /opt/fitnesse
 
 
