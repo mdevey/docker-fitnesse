@@ -33,6 +33,9 @@ RUN mkdir -p /opt/fitnesse/FitNesseRoot \
 COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 
+VOLUME /opt/fitnesse/FitNesseRoot
+EXPOSE 80
+
 WORKDIR /opt/fitnesse
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
