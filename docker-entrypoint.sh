@@ -2,4 +2,4 @@
 set -e
 
 chown -R 888.888 /opt/fitnesse
-exec gosu fitnesse java -jar /opt/fitnesse/fitnesse-standalone.jar "$@"
+exec gosu fitnesse java -jar /opt/fitnesse/fitnesse-standalone.jar -p 9090 "$@"
